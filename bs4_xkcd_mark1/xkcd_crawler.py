@@ -12,8 +12,14 @@ while not url.endwith('#'):
     # xkcd's very first comic's url ends with a numbersign #
     
     # TODO: Download the page
+    print ('Downloading page %s...' % base_url)
+    res1 = requests.get(base_url)
+    res1.raise_for_status()
+
+    soup1 = bs4.BeautifulSoup(res1.text)
 
     # TODO: Find the URL of the comic image
+
 
     # TODO: Download the image
 
